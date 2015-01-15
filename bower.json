@@ -1,0 +1,18 @@
+{
+  "name": "kholifah",
+  "version": "1.0",
+  "homepage": "https://github.com/kholifah/cechcalk",
+  "authors": [
+    "kholifah <tm.kholifah@gmail.com>"
+  ],
+  "description": "microbloging",
+  "main": "iindex.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

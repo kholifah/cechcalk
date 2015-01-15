@@ -1,0 +1,7 @@
+.clear{
+	clear: both;
+}
+.clear:after{
+	clear: both;
+	content: "";
+}

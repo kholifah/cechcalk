@@ -1,0 +1,37 @@
+.clear {
+  clear: both; }
+
+.clear:after {
+  clear: both;
+  content: ""; }
+
+.login-form {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 5px #1f1e1e; }
+  .login-form ul.login-tab-menu {
+    padding: 0; }
+    .login-form ul.login-tab-menu > li {
+      display: inline-block;
+      list-style: none;
+      width: 50%;
+      float: left; }
+      .login-form ul.login-tab-menu > li a {
+        text-decoration: none;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        background-color: #ccc; }
+      .login-form ul.login-tab-menu > li a.active {
+        background-color: #fff; }
+
+#login form {
+  padding: 5px; }
+  #login form label input {
+    width: 100%; }
+
+#register {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */

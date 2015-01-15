@@ -9,9 +9,9 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<div class="form-login">
-		<ul>
-			<li><a href="#login">Login</a></li>
+	<div class="login-form">
+		<ul class="login-tab-menu">
+			<li><a href="#login" class="active">Login</a></li>
 			<li><a href="#register">Register</a></li>
 		</ul>
 		
