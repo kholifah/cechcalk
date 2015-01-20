@@ -32,7 +32,16 @@
 		</div>
 		
 		<div id="register" class="tab-target">
-			<form action="userAuth.php" method="post">
+			<form action="userRegistration.php" method="post">
+				<?php
+					if(isset($_GET['msg'])){
+				?>
+				<p class="notivication">
+					<?php echo $_GET['msg']; ?>
+				</p>
+				<?php
+					}
+				?>
 				<label>
 					<input type="text" name="username" placeholder="username">
 				</label>
@@ -49,5 +58,10 @@
 			</form>
 		</div>
 	</div>
+	<script>
+    	var tab = window.location.href.split('#');
+    	var trigger = document.querySelector(".login-tab-menu li a[href='#"+tab[1]+"']");
+    	tabHandler(trigger);
+  </script>
 </body>
 </html>
