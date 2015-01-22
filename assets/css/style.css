@@ -54,12 +54,20 @@ input[type='submit'] {
       background-color: #fff; }
   .login-form #login {
     padding: 41px 20px 20px; }
+    .login-form #login .notivication {
+      background-color: #e74c3c;
+      padding: 18px 8px;
+      color: #fff;
+      text-align: center;
+      font-size: 17px; }
   .login-form #register {
     display: none;
     padding: 41px 20px 20px; }
     .login-form #register .notivication {
       background-color: #e74c3c;
-      padding: 20px 10px;
-      color: #fff; }
+      padding: 18px 8px;
+      color: #fff;
+      text-align: center;
+      font-size: 17px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,6 +17,15 @@
 		</ul>
 		
 		<div id="login" class="tab-target">
+			<?php
+					if(isset($_GET['log'])){
+				?>
+				<p class="notivication">
+					<?php echo $_GET['log']; ?>
+				</p>
+				<?php
+					}
+				?>
 			<form action="userAuth.php" method="post">
 				<label>
 					<input type="text" name="username" placeholder="username">
@@ -32,16 +41,16 @@
 		</div>
 		
 		<div id="register" class="tab-target">
-			<form action="userRegistration.php" method="post">
-				<?php
-					if(isset($_GET['msg'])){
+			<?php
+					if(isset($_GET['reg'])){
 				?>
 				<p class="notivication">
-					<?php echo $_GET['msg']; ?>
+					<?php echo $_GET['reg']; ?>
 				</p>
 				<?php
 					}
 				?>
+			<form action="userRegistration.php" method="post">
 				<label>
 					<input type="text" name="username" placeholder="username">
 				</label>

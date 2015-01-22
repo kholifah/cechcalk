@@ -12,6 +12,6 @@
 	){
 		
 	}else{
-		header("location:login.php?msg=Data Ada Yang Tidak Valid Broo...!#register");
+		header("location:login.php?reg=Data Ada Yang Tidak Valid Broo...!#register");
 	}
 ?>
