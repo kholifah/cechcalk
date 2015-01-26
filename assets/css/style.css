@@ -21,6 +21,9 @@ input[type='password'] {
   padding: 1.1em;
   margin-bottom: 1em; }
 
+input[type='checkbox'] {
+  margin: 0 5px; }
+
 input[type='submit'] {
   padding: 15px 20px;
   border: none;
@@ -33,7 +36,7 @@ input[type='submit'] {
 
 .login-form {
   width: 100%;
-  max-width: 460px;
+  max-width: 422px;
   margin: 100px auto;
   box-shadow: 0 0 15px #999; }
   .login-form ul.login-tab-menu {
@@ -49,7 +52,8 @@ input[type='submit'] {
         display: block;
         text-decoration: none;
         padding: 20px;
-        text-align: center; }
+        text-align: center;
+        color: #000; }
     .login-form ul.login-tab-menu > li.active {
       background-color: #fff; }
   .login-form #login {

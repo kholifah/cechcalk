@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	if(isset($_SISSEN['is_login']) && $SISSEN['is_login'] === true){
+		header("location:users/dashboarn.php");
+	}else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,3 +80,6 @@
   </script>
 </body>
 </html>
+<?php
+}
+?>

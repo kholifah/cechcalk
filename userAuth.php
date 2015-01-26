@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	require "lib/database/database.php";
 	require "lib/validation/validation.php";
 
@@ -7,19 +9,40 @@
 
 	$validation = new validation();
 
-	if(	$validation->validate_is_not_null($username) &&
-		$validation->validate_password_is_not_null($password)
+	if(	$validation->validate_username($username) &&
+		$validation->validate_password($password)
 	){
-		$db = new database("
-				pgsql:dbname=calk;
-				host=localhost;
-				user=postgres;
-				password=samporan;
-			");
-		if ($db->isConnected()) {
-			$sql ="SELECT * FROM calker WHERE username=:username";
+		$dbname="calk";
+		$host="localhost";
+		$uname="postgres";
+		$pswd="samporan";
+		$dbh = new Database("pgsql:host=$host;dbname=$dbname;user=$uname;password=$pswd");
 
-			echo $sql;
+		// $query =$dbh->query('
+		// 	SELECT 
+		// 	*
+		// 	FROM calker 
+		// 	WHERE 
+		// 	username=:$username 
+		// 	AND 
+		// 	password=:$password
+		// 	');
+		if ($dbh->isConnected()){
+			$qry = $dbh->get('calker', array(
+				'username'=>$username
+
+			));
+
+			$data= $qry->fetch(PDO::FETCH_ASSOC);
+
+			if($data['password'] === md5($password) && $qry->rowCount() === 1){
+				$_SESSION['is_login'] = true;
+				$_SESSION['username'] = $username;
+				header("location:users/dashboard.php");
+			}else{
+				header("location:login.php?log=username dan password anda salah");
+			}
+
 		}else{
 			header("location:login.php?log=login gagal");
 		}
